@@ -23,7 +23,7 @@ kramdown:
  syntax_highlighter: rouge
 
 # Permalinks
-permalink:        pretty
+permalink   : /:year/:title/
 
 paginate:         5
 plugins: [jekyll-paginate, jekyll-gist]
