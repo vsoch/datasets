@@ -2,14 +2,27 @@
 layout: default
 ---
 
-<div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
-  {{ content }}
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+  <script src="{{ "/assets/js/toc.js" | prepend: site.baseurl }}"></script>
   {% if page.editable %}
   {% include editable.html %}
   {% endif %}
-</div>
+
+<section id="about">
+  <h1 class="post-title">{{ page.title }}</h1>
+
+  <div>
+  <a class="project-button" href="/datasets/"><i class="icon fa fa-arrow-left" aria-hidden="true"></i> Datasets</a>
+  <a class="project-button" href="{{ page.github }}" target="_blank"><i class="icon fa fa-github-alt" aria-hidden="true"></i> Github</a>
+  <a class="project-button" href="#tutorial">Tutorial</a>
+  </div><br>
+
+  <span class="post-date" style="float:right">{{ page.date | date_to_string }}</span>
+  {{ content }}
+</section>
 
 {% if site.replated_posts %}
 <div class="related">
@@ -28,5 +41,3 @@ layout: default
   </ul>
 </div>
 {% endif %}
-
-{% include share_links.html %}
