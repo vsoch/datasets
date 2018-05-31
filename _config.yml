@@ -1,0 +1,36 @@
+# Site settings
+title: The Dinosaur Datasets
+description: Open source, creative datasets for discovery in science.
+baseurl: "/datasets"  # the subpath of your site, e.g. /blog
+#url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+
+# User settings
+username: Dinosaur Datasets
+user_description: Open source, creative datasets for discovery in science.
+user_title: Open Source Discovery
+email: "@vsoch"
+twitter_username: vsoch
+github_username:  vsoch
+
+highlighter:      rouge
+markdown: kramdown
+kramdown:
+ input: GFM
+ auto_ids: true
+ hard_wrap: false
+ syntax_highlighter: rouge
+
+# Permalinks
+permalink:        pretty
+
+paginate:         5
+plugins: [jekyll-paginate, jekyll-gist]
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"

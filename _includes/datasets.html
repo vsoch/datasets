@@ -1,0 +1,12 @@
+<div class="user-details">
+</div>
+
+{% for post in paginator.posts %}
+<div>
+  <div class="contents">
+    <h3> {{ post.title }}</h3>
+    <p>{{ post.snippet }}</p>
+    <a class="project-link" href="{{ site.baseurl }}{{ post.url }}">Check it out</a>
+  </div>
+</div>
+{% endfor %}
