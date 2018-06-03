@@ -24,7 +24,7 @@ layout: default
   {{ content }}
 </section>
 
-{% if site.replated_posts %}
+{% if site.related_posts %}
 <div class="related">
   <h2>Related Content</h2>
   <ul class="related-posts">
@@ -40,4 +40,5 @@ layout: default
     {% endfor %}
   </ul>
 </div>
+{% include widget.html %}
 {% endif %}
