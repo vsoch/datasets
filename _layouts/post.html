@@ -23,22 +23,4 @@ layout: default
   <span class="post-date" style="float:right">{{ page.date | date_to_string }}</span>
   {{ content }}
 </section>
-
-{% if site.related_posts %}
-<div class="related">
-  <h2>Related Content</h2>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-      <li>
-        <h3>
-          <a href="{{ site.url }}{{ post.url }}">
-            {{ post.title }}{{ post }}
-            <small>{{ post.date | date_to_string }}</small>
-          </a>
-        </h3>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
 {% include widget.html %}
-{% endif %}
