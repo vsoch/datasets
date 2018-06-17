@@ -47,12 +47,12 @@ $(document).ready(function() {
 
 
         // Edit
-        var link = "{{ site.github }}/edit/master/{{ page.path }}#" + did;
+        var link = "{{ site.github.repo }}/edit/master/{{ page.path }}#" + did;
         var button = "<p><a href='" + link + "' target='_blank'>Edit this page</a></p>";
         start += button;
 
         // Issues
-        var link = "{{ site.github }}/issues/new?labels={{ page.editable }}&title=Question:&body=Question on: {{ site.github.repo }}/tree/master/{{ page.path }}%23" + did;
+        var link = "{{ site.github.repo }}/issues/new?labels={{ page.editable }}&title=Question:&body=Question on: {{ site.github.repo }}/tree/master/{{ page.path }}%23" + did;
 
         var button = "<p><a href='" + link + "' target='_blank'>Ask a Question</a></p>";
         start += button;
