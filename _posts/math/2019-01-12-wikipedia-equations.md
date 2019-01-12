@@ -16,12 +16,12 @@ editable: math
 [![DOI](https://zenodo.org/badge/165427328.svg)](https://zenodo.org/badge/latestdoi/165427328)
 
 The [Wikipedia Equation Embeddings]({{ page.github }}) dataset includes two datasets
-that each container word2vec embeddings generated from latex equations extracted
-from Wikipedia statistics and math articles. You can see the README.md in
+that each contain word2vec embeddings generated from LaTex equations extracted
+from Wikipedia statistics and math articles, along with metadata for the articles
+themselves. You can see the README.md in
 each of the [math](https://github.com/vsoch/wikipedia-equations/tree/master/math) 
 and [statistics](https://github.com/vsoch/wikipedia-equations/tree/master/statistics) 
 subfolders for information on generation and using the data.
-
 
 ### Download
 
@@ -39,9 +39,10 @@ wget https://github.com/vsoch/wikipedia-equations/archive/0.0.1.tar.gz
 
 Here are some interesting questions these datasets might help answer:
 
- - Can you predict terms from equations? Meaning, you can take a new equation, and generate terms that describe how it's been used or described?
- - Can you predict equations from terms? Meaning, you could create a search engine where a user searches for a term, and gets back equations that are associated?
  - What domains of math are more strongly associated with different domains (of science? something else?)
+ - Can you predict equations from terms? Meaning, you could create a search engine where a user searches for a term, and gets back equations that are associated?
+ - Can you predict terms from equations? Meaning, you can take a new equation, and generate terms that describe how it's been used or described?
+
 
 ### Other questions?
 
