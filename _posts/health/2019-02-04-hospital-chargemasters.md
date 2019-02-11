@@ -20,7 +20,7 @@ see [here](https://vsoch.github.io/2019/hospital-chargemasters/).
 
 ### Download
 
-The datasets are both provided via the Github repository:
+The datasets are provided via the Github repository:
 
 ```bash
 
@@ -46,8 +46,8 @@ As of January 1, 2019, hospitals are required to share their price lists. Howeve
 
 ### 1. Get List of Hospital Pages
 
-We have compiled a list of hospitals and links in the [hospitals.tsv](hospitals.tsv) 
-file, generated via the [0.get_hospitals.py](0.get_hospitals.py) script. 
+We have compiled a list of hospitals and links in the [hospitals.tsv](https://github.com/vsoch/hospital-chargemaster/tree/master/hospitals.tsv) 
+file, generated via the [0.get_hospitals.py](https://github.com/vsoch/hospital-chargemaster/tree/master/0.get_hospitals.py) script. 
 The file includes the following variables, separated by tabs::
 
  - **hospital_name** is the human friendly name
@@ -59,7 +59,7 @@ systems that might include more than one hospital.
 
 ### 2. Organize Data
 
-Each hospital has records kept in a subfolder in the [data](data) folder. Specifically,
+Each hospital has records kept in a subfolder in the [data](https://github.com/vsoch/hospital-chargemaster/tree/master/data) folder. Specifically,
 each subfolder is named according to the hospital name (made all lowercase, with spaces 
 replaced with `-`). Within each folder, you will find:
 
@@ -72,9 +72,9 @@ replaced with `-`). Within each folder, you will find:
    - `*.csv` or `*.xlsx` or `*.json`: the scraped data files.
 
 The first iteration was run locally (to test the scraping). One significantly different
-scraper is the [oshpd-ca](data/oshpd-ca) folder, which includes over 795 hospitals! Way to go
+scraper is the [oshpd-ca](https://github.com/vsoch/hospital-chargemaster/tree/master/data/oshpd-ca) folder, which includes over 795 hospitals! Way to go
 California! However, this means that we have more than one latest file, to afford the files being
-under 100MB and being allowed on GitHub. Additionlly, [avent-health](data/advent-health) provides (xml) charge lists for a ton of states.
+under 100MB and being allowed on GitHub. Additionlly, [avent-health](https://github.com/vsoch/hospital-chargemaster/tree/master/data/advent-health) provides (xml) charge lists for a ton of states.
 
 #### Why do you have some redundant code?
 
@@ -128,14 +128,15 @@ In order to make this automated, we will do the following:
 The original dataset was obtained from an article that [listed the top 115 US Hospitals](https://www.cms.gov/newsroom/fact-sheets/fiscal-year-fy-2019-medicare-hospital-inpatient-prospective-payment-system-ipps-and-long-term-acute-0), but this isn't to say that other hospitals aren't
 important and deserving to belong here! If you want to add a hospital:
 
- 1. Add your hospital name, identifier, and (human friendly) link to the [hospitals.tsv](hospitals.tsv) file. If you add a hospital folder and fail to update this file, or update the file and forget or misname the folder an error will be triggered.
+ 1. Add your hospital name, identifier, and (human friendly) link to the [hospitals.tsv](https://github.com/vsoch/hospital-chargemaster/tree/master/hospitals.tsv) file. If you add a hospital folder and fail to update this file, or update the file and forget or misname the folder an error will be triggered.
  2. Create a subfolder based on the `hospital_uri` from the file.
  3. Write a `scrape.py` script in the folder. You can use others as templates, but the file should generate an output directory with the present date, and recursive copy the new folder to be latest.
+ 4. Write a `parse.py` file to generate the latest-* data frames (you can use other folders as starting templates).
 
 The data will be updated on an annual basis, or when a pull request is issued to update the repository.
 Upon merge, the generated latest data will be pushed back to the repository.
 
 ### Other questions?
 
-If you have other questions, or want help for your project, please don't hesitate to <a href="{{ post.github }}">open an issue</a>. If you use any of the datasets in your work,
+If you have other questions, or want help for your project, please don't hesitate to <a href="{{ post.github }}/issues">open an issue</a>. If you use any of the datasets in your work,
 please remember to include the doi.
