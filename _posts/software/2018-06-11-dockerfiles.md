@@ -13,12 +13,17 @@ editable: software
 ## Summary
 
 The [Dockerfiles]({{ page.github }}) dataset is a set of approximately 130,000 Dockerfiles
-extracted in early summer 2018 across a sampling of search prefixes.
+extracted in early summer 2018 across a sampling of search prefixes (v1.0.0) and 100,000 Dockerfiles
+extracted in January 2020 (v2.0.0).
 
 ```bash
 
 $ find data -type f -name Dockerfile | wc -l
 129,519
+
+
+$ find data -type f -name Dockerfile | wc -l
+99,826
 
 ```
 
@@ -97,9 +102,14 @@ from cloning the repo, or downloading the archive.
 ```bash
 
 git clone https://www.github.com/vsoch/datasets
+
+# Version 1.0.0
 wget https://github.com/vsoch/dockerfiles/archive/1.0.0.zip
 wget https://github.com/vsoch/dockerfiles/archive/1.0.0.tar.gz
 
+# Version 2.0.0
+wget https://github.com/vsoch/dockerfiles/archive/2.0.0.zip
+wget https://github.com/vsoch/dockerfiles/archive/2.0.0.tar.gz
 ```
 
 ### Questions
