@@ -2,9 +2,11 @@
 </div>
 
 <hr>
-<h1> Datasets </h1>
-<a href="{{ site.baseurl }}/list/">View All Databsets</a
-{% for post in paginator.posts %}
+<h1> All Datasets </h1>
+<a href="{{ site.baseurl }}/"><< 
+Back to Home</a
+>
+{% for post in site.posts %}
 <div>
   <div class="contents">
     <h3> {{ post.title }}</h3>
